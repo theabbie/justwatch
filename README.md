@@ -37,7 +37,7 @@ You can contact me on social media, Everything about me can be found [here](http
 
 ## Credits
 
-* [Seedr.cc](https://seedr.cc) For making an excellent tool
+* [Justwatch](https://justwatch.com) For making an excellent tool
 
 ## Contact
 

@@ -1,6 +1,6 @@
 {
   "name": "justwatch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Unofficial API wrapper for Justwatch.com",
   "main": "index.js",
   "scripts": {
