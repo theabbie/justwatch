@@ -1,6 +1,6 @@
 var axios = require("axios");
 
-class Justwatch {
+module.exports = class Justwatch {
   constructor() {}
 
   static async search(q,isPerson) {
