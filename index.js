@@ -1,17 +1,19 @@
 var axios = require("axios");
 
 module.exports = class Justwatch {
-  constructor() {}
+  constructor(locale = "en_US") {
+    this.locale = locale;
+  }
 
-  static async search(q,isPerson,n) {
+  async search(q,isPerson,n) {
     var type = isPerson?"person":"movie";
     n = +n || 15;
-    var data = await axios('https://apis.justwatch.com/content/titles/en_US/popular?body={"page_size":'+n+',"page":1,"query":"'+q.split(" ").join("+")+'","content_types":["'+type+'"]}');
+    var data = await axios('https://apis.justwatch.com/content/titles/"+locale+"/popular?body={"page_size":'+n+',"page":1,"query":"'+q.split(" ").join("+")+'","content_types":["'+type+'"]}');
     return data.data;
   }
 
-  static async get(id) {
-    var data = await axios("https://apis.justwatch.com/content/titles/movie/"+id+"/locale/en_IN");
+  async get(id) {
+    var data = await axios("https://apis.justwatch.com/content/titles/movie/"+id+"/locale/"+locale);
     return data.data;
   }
 }
