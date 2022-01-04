@@ -6,7 +6,10 @@ Unofficial API wrapper for Justwatch.com
 ## How to use
 The Following code snippet will help you understand how it works  
 ```js
-var jw = require("justwatch");
+var Justwatch = require("justwatch");
+
+var jw = new Justwatch("en_US");
+
 var movies = await jw.search("query");
 // returns a list of movies
 
